@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Projet {
@@ -24,7 +25,8 @@ public class Projet {
 	private String architect;
 	private String ct;
 	private String geotechnicien;
-	private String entreprise;
+	@ManyToOne
+	private Entrepise entreprise;
 	private String modeInfra;
 	private String modeSuperstructure;
 	private String infoHypoSupp;
@@ -98,10 +100,11 @@ public class Projet {
 	public void setGeotechnicien(String geotechnicien) {
 		this.geotechnicien = geotechnicien;
 	}
-	public String getEntreprise() {
+	
+	public Entrepise getEntreprise() {
 		return entreprise;
 	}
-	public void setEntreprise(String entreprise) {
+	public void setEntreprise(Entrepise entreprise) {
 		this.entreprise = entreprise;
 	}
 	public String getModeInfra() {
