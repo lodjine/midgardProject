@@ -13,6 +13,21 @@ midgApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/nouveauProjet',
             templateUrl: 'formProjet.html',
 			controller: 'projetCtrl'
+        }).state('detailProjet', {
+    		url : '/detailProjet/:id',
+    		templateUrl : 'modifProjet.html',
+    		controller : 'modifProjetCtrl'
+    			
+        }).state('listPhase', {
+    		url : '/listPhase',
+    		templateUrl : 'listPhase.html',
+    		controller : 'phaseCtrl'
+    			
+        }).state('listUser', {
+    		url : '/listUser',
+    		templateUrl : 'listUser.html',
+    		controller : 'userCtrl'
+    			
         });
-
+    
 });
