@@ -31,19 +31,13 @@
 
 		<tbody>
 			<tr ng-repeat="item in projets">
-				<td>{{item.idbd}}</td>
+				<td>{{item.idProjet}}</td>
 				<td>{{item.nomProjet}}</td>
 				<td>{{item.dateDebut | date}}</td>
 				<td>{{item.dateFin | date}}</td>
 
-				<td><button type="nav-link" data-toggle="modal"
-						data-target="#editModal" class="btn btn-primary btn-block"
-						ng-click="selectFournisseur(item)">
-						<i class="fa fa-refresh" aria-hidden="true"></i> Modifier
-					</button>
-					<button type="submit" class="btn btn-primary btn-block"
-						ng-click="deleteFournisseur(item.idFournisseur)">
-						<i class="fa fa-times-circle" aria-hidden="true"></i> Supprimer
+				<td><button type="submit" class="btn btn-primary btn-block" ui-sref="detailProjet({id:item.idbd})">
+						<i class="fa fa-search  " aria-hidden="true"></i> Consulter
 					</button></td>
 			</tr>
 		</tbody>

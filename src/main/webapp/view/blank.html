@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>SB Admin 2 - Bootstrap Admin Theme</title>
+<title>Midgard</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,10 +34,20 @@
 <script src="../app/entrepriseService.js"></script>
 <script src="../app/phaseService.js"></script>
 <script src="../app/documentService.js"></script>
+
 <script src="../view/event/eventService.js"></script>
+
+<script src="../app/userService.js"></script>
+
 
 <script src="../app/projetCtrl.js"></script>
 <script src="../view/event/eventController.js"></script>
+<script src="../app/modifProjetCtrl.js"></script>
+<script src="../app/phaseCtrl.js"></script>
+<script src="../app/userCtrl.js"></script>
+
+
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -60,7 +71,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">Midgard P&P
+				<a class="navbar-brand" href="blank.html">Midgard P&P
 					Application</a>
 			</div>
 			<!-- /.navbar-header -->
@@ -252,10 +263,19 @@
 								<output></output>
 							</div>
 						</li>
-						<li><a ui-sref="projet"><i class="fa fa-dashboard fa-fw"></i>
+						<li><a ui-sref="projet"><i class="fa fa-book   fa-fw"></i>
 								Projets</a></li>
+
 						<li><a ui-sref="event"><i class="fa fa-dashboard fa-fw"></i>
 								Events</a></li>
+
+						<li><a ui-sref="listPhase"><i class="fa fa-th-list fa-fw"></i>
+								Phases</a></li>
+
+						<li><a ui-sref="listUser"><i class="fa  fa-users fa-fw"></i>
+								Users</a></li>
+
+
 					</ul>
 				</div>
 				<!-- /.sidebar-collapse -->
