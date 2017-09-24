@@ -1,11 +1,23 @@
 var midgApp = angular.module('midgApp');
 
 var projetCtrl=midgApp.controller('projetCtrl', function($scope,$window,projetService,entrepriseService,phaseService,documentService) {
-	 
 	
-	
+
 	$scope.projets=projetService.query();
-	$scope.documents=[]; 
+
+	$scope.documents=[{
+			"typeDoc" : 'CCTP'
+	},{
+			"typeDoc" : 'Rapport Géo'
+	},{
+			"typeDoc" : 'Plan architecture'
+	},{
+			"typeDoc" : 'Plans DCE'
+	},{
+			"typeDoc" : 'Plans charpente'
+	},{
+			"typeDoc" : 'Avis CT'
+	}]; 
 	$scope.entreprises=entrepriseService.query();
 	$scope.Add = function () {
         //Add the new item to the Array.
