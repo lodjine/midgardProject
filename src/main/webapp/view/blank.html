@@ -16,7 +16,7 @@
 
 <!-- MetisMenu CSS -->
 <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
- 
+
 <!-- Custom CSS -->
 <link href="dist/css/sb-admin-2.css" rel="stylesheet">
 
@@ -33,9 +33,10 @@
 <script src="../app/entrepriseService.js"></script>
 <script src="../app/phaseService.js"></script>
 <script src="../app/documentService.js"></script>
+<script src="../view/event/eventService.js"></script>
 
 <script src="../app/projetCtrl.js"></script>
-
+<script src="../view/event/eventController.js"></script>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -253,7 +254,8 @@
 						</li>
 						<li><a ui-sref="projet"><i class="fa fa-dashboard fa-fw"></i>
 								Projets</a></li>
-
+						<li><a ui-sref="event"><i class="fa fa-dashboard fa-fw"></i>
+								Events</a></li>
 					</ul>
 				</div>
 				<!-- /.sidebar-collapse -->

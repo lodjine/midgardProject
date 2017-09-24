@@ -13,6 +13,10 @@ midgApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/nouveauProjet',
             templateUrl: 'formProjet.html',
 			controller: 'projetCtrl'
+        }).state('event', {
+            url: '/listEvents',
+            templateUrl: 'event/listevent.html',
+			controller: 'eventController'
         });
 
 });
