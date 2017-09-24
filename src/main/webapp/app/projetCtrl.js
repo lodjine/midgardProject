@@ -18,7 +18,6 @@ var projetCtrl = midgApp.controller('projetCtrl', function($scope, $window,
 	}]; 
 
 	$scope.projets = projetService.query();
-	$scope.documents = [];
 	$scope.phase = {
 		id : null,
 		docs : []
