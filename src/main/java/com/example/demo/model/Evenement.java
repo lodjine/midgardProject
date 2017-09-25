@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.Cascade;
@@ -42,7 +43,8 @@ public class Evenement {
 	private Date dateFin;
 	
 	private String priorite;
-	
+	@ManyToOne
+	private Statut statut;
 	public String getDocAtransm() {
 		return docAtransm;
 	}
@@ -129,6 +131,14 @@ public class Evenement {
 
 	public void setPriorite(String priorite) {
 		this.priorite = priorite;
+	}
+
+	public Statut getStatut() {
+		return statut;
+	}
+
+	public void setStatut(Statut statut) {
+		this.statut = statut;
 	}
 
 }

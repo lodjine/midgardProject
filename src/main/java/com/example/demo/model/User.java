@@ -23,6 +23,8 @@ private String prenom;
 
 private String role;
 
+private Boolean interne;
+
 public Long getId() {
 	return id;
 }
@@ -69,6 +71,16 @@ public String getRole() {
 
 public void setRole(String role) {
 	this.role = role;
+}
+
+
+
+public Boolean getInterne() {
+	return interne;
+}
+
+public void setInterne(Boolean interne) {
+	this.interne = interne;
 }
 
 public User() {

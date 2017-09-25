@@ -32,7 +32,8 @@ public class Projet {
 	private String modeSuperstructure;
 	private String infoHypoSupp;
 
-	
+	@ManyToOne
+	private Statut statut;
 	
 	
 	
@@ -131,6 +132,12 @@ public class Projet {
 	}
 	public void setIdProjet(Long idProjet) {
 		this.idProjet = idProjet;
+	}
+	public Statut getStatut() {
+		return statut;
+	}
+	public void setStatut(Statut statut) {
+		this.statut = statut;
 	}
 	
 }
