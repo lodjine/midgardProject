@@ -19,6 +19,11 @@ midgApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'event/listevent.html',
 			controller: 'eventController'
 
+        }).state('nouveauEvent', {
+            url: '/nouveauEvent',
+            templateUrl: 'event/formevent.html',
+			controller: 'eventController'
+
         }).state('detailProjet', {
     		url : '/detailProjet/:id',
     		templateUrl : 'modifProjet.html',

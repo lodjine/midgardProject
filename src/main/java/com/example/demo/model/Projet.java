@@ -14,6 +14,7 @@ public class Projet {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long idbd;
+	@Column(unique=true)
 	private Long idProjet;
 	private String nomProjet;
 	private Date dateDebut;
