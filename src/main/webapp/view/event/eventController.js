@@ -6,15 +6,16 @@
 
 	angular.module('midgApp').controller('eventController', eventController);
 	eventController.$inject = [ '$scope', '$state', '$rootScope',
-			'eventService','projetService' ];
+			'eventService','projetService' ,'phaseService'];
 
 	function eventController($scope, $state, $rootScope, 
-			eventService,projetService) {
+			eventService,projetService,phaseService) {
 		$scope.event={};
 		$scope.events = eventService.query();
+		$scope.phases = phaseService.query();
 		$scope.projets = projetService.query();
 		$scope.update = function() {
-			  console.log($scope.event.projet.nomProjet +"  N°"+$scope.event.projet.idProjet);
+			  alert(event.projet);
 		  }
 		   
 	

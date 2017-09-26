@@ -1,40 +1,109 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Nouveau Evenement</h1>
+			<h1 class="page-header">Nouvel Evenement</h1>
 		</div>
 
 	</div>
-	<div class="row">
-		<div class="col-lg-11">
 
+
+</div>
+<div class="panel panel-default">
+
+	<div class="panel-body">
+		<div class="row">
 			<div class="panel-body">
 				<div class="row">
-					<div class="col-md-2">
+					<div class="col-md-1">
 						<label>Projet :</label>
 					</div>
-					<div class="col-md-2">
-						<select ng-model="event.projet" class="form-control"
-							ng-change="update()">
-							<option ng-repeat="x in projets" ng-value="x.idProjet">{{x.nomProjet}}
+					<div class="col-md-4">
+						<select ng-model="x" class="form-control" ng-change="update()">
+							<option ng-repeat="x in projets" ng-value="x">{{x.nomProjet}}
 							</option>
 						</select>
 
 					</div>
-					<div class="col-md-2">
-						<label>Phase</label>
+					<div class="col-md-1">
+						<label>Phase :</label>
 					</div>
-					<div class="col-md-2">
-						<select ng-model="event.phase" class="form-control"
-							ng-change="update()">
-							<option ng-repeat="x in phasaes" ng-value="x.idProjet">{{x.nomProjet}}
-							</option>
+					<div class="col-md-4">
+						<select ng-model="event.phase" class="form-control">
+							<option ng-repeat="x in phases">{{x.phase}}</option>
 						</select>
 
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-lg-5">
+					<div class="form-group">
+						<label>Lot &agrave; traiter </label> <br /> <label
+							class="checkbox-inline"> <input ng-model="phase.archi"
+							type="checkbox">A
+						</label> <label class="checkbox-inline"> <input
+							ng-model="phase.grosOeuvre" type="checkbox">CO
+						</label> <label class="checkbox-inline"> <input
+							ng-model="phase.metal" type="checkbox">CM
+						</label> <label class="checkbox-inline"> <input
+							ng-model="phase.bois" type="checkbox">CB
+						</label> <label class="checkbox-inline"> <input
+							ng-model="phase.voirie" type="checkbox">VRD
+						</label>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="form-group">
+						<label>Docs &agrave; transmettre </label> <br /> <label
+							class="checkbox-inline"> <input ng-model="phase.archi"
+							type="checkbox">Plans
+						</label> <label class="checkbox-inline"> <input
+							ng-model="event.plans" type="checkbox">Note de calculs
+						</label> <label class="checkbox-inline"> <input
+							ng-model="event.noteCalcul" type="checkbox">Quantitatifs
+						</label> <label class="checkbox-inline"> <input
+							ng-model="event.quantitif" type="checkbox">Mod&egrave;le
+							3D
+						</label> <label class="checkbox-inline"> <input
+							ng-model="event.modele3d" type="checkbox">Rapport
+						</label>
+					</div>
+				</div>
+			</div>
 
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+				<label>Etat : </label>
+			</div>
+			<div class="col-md-4">
+
+
+				<select class="form-control" ng-model="etatDoc">
+					<option>choisir un &eacute;tat</option>
+					<option>Non trait&eacute;</option>
+					<option>En cours</option>
+					<option>V&eacute;rifi&eacute;</option>
+					<option>Termin&eacute;</option>
+					<option>Arr&ecirc;t</option>
+					<option>Abandon</option>
+				</select>
+			</div>
+			<div class="col-md-3">
+				<label>Quantification d&eacute;lai : </label>
+			</div>
+			<div class="col-md-2">
+
+				<input class="form-control" ng-model="event.jhIng"
+					placeholder="JH Ing" type="text" /> 
+			</div>
+			<div class="col-md-2">
+
+			 <input class="form-control"
+					ng-model="event.jhTech" placeholder="JH Tech" type="text" />
+			</div>
+		</div>
+	</div>
 </div>
