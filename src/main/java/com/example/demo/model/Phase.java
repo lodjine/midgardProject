@@ -30,6 +30,9 @@ public class Phase {
 	private boolean metal;
 	private boolean bois;
 	private boolean voirie;
+	
+	@ManyToOne
+	private Statut statut;
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	private Projet projet;
 	@ManyToMany(cascade = CascadeType.PERSIST)
@@ -189,6 +192,22 @@ public class Phase {
 
 	public void setDocs(Set<Document> docs) {
 		this.docs = docs;
+	}
+
+	public Long getIdphas() {
+		return idphas;
+	}
+
+	public void setIdphas(Long idphas) {
+		this.idphas = idphas;
+	}
+
+	public Statut getStatut() {
+		return statut;
+	}
+
+	public void setStatut(Statut statut) {
+		this.statut = statut;
 	}
 
 }
