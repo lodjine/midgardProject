@@ -30,19 +30,26 @@ public class Evenement {
 
 	private String etat;
 
-	
 	private String etatAvcmt;
-	
+
 	private String quantificationDelai;
-	
+
 	private Date dateDebut;
-	
+
 	private Date echeance;
-	
+
 	private Date dateFin;
-	
+
 	private String priorite;
+
+	private boolean plans;
+	private boolean noteCalcul;
+	private boolean quantitif;
+	private boolean modele3d;
+	private boolean rapport;
 	
+	
+
 	public String getDocAtransm() {
 		return docAtransm;
 	}
@@ -129,6 +136,46 @@ public class Evenement {
 
 	public void setPriorite(String priorite) {
 		this.priorite = priorite;
+	}
+
+	public boolean isPlans() {
+		return plans;
+	}
+
+	public void setPlans(boolean plans) {
+		this.plans = plans;
+	}
+
+	public boolean isNoteCalcul() {
+		return noteCalcul;
+	}
+
+	public void setNoteCalcul(boolean noteCalcul) {
+		this.noteCalcul = noteCalcul;
+	}
+
+	public boolean isQuantitif() {
+		return quantitif;
+	}
+
+	public void setQuantitif(boolean quantitif) {
+		this.quantitif = quantitif;
+	}
+
+	public boolean isModele3d() {
+		return modele3d;
+	}
+
+	public void setModele3d(boolean modele3d) {
+		this.modele3d = modele3d;
+	}
+
+	public boolean isRapport() {
+		return rapport;
+	}
+
+	public void setRapport(boolean rapport) {
+		this.rapport = rapport;
 	}
 
 }

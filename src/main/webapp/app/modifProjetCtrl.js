@@ -9,6 +9,8 @@ function modifProjetCtrl($scope,entrepriseService,projetService, $window,$state,
 	var idProjet=$stateParams.id;
 	if(idProjet != null){
 		$scope.projet= projetService.get({id:idProjet});
+		$scope.date=$scope.projet.dateDebut;
+		console.log($scope.projet);
 	}
 	
 	
