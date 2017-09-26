@@ -8,7 +8,7 @@
 	<!-- /.row -->
 	<div class="col-lg-2">
 		<button type="nouveau" class="btn btn-primary btn-block"
-			ui-sref="formProjet">
+			ui-sref="formTache">
 
 			<i class="fa fa-times-circle" aria-hidden="true"></i> nouvelle tache
 		</button>
@@ -20,8 +20,7 @@
 		<thead>
 			<tr>
 				<th>Id tache</th>
-				<th>Id projet</th>
-				<th>Id phase</th>
+				<th>Id evenement</th>
 				<th>Description</th>
 				<th>Avancement</th>
 				<th>Operateur</th>
@@ -32,12 +31,33 @@
 		</thead>
 
 		<tbody>
-			<tr ng-repeat="item in users">
-				<td>{{item.nom}}</td>
-				<td>{{item.prenom}}</td>
-				<td>{{item.userName}}</td>
-				<td>{{item.role}}</td>
-
+			<tr ng-repeat="item in taches">
+				<td>{{item.idTache}}</td>
+				<td>{{item.event.idEvenement}}</td>
+				<td>{{item.description}}</td>
+				<td style="width: 30%">
+				
+				
+			<div class="progress progress-striped active">
+										<div class="progress-bar progress-bar-danger" ng-show="item.etatAavancement<=20"
+											role="progressbar" aria-valuenow="{{item.etatAavancement}}" aria-valuemin="0"
+											aria-valuemax="100" style="width: {{item.etatAavancement}}%">
+											<span class="sr-only"  ng-show="item.etatAavancement<=20">{{item.etatAavancement}} %</span>
+										</div>
+										<div class="progress-bar progress-bar-warning" ng-show="item.etatAavancement <= 60 &&  20 < item.etatAavancement"
+											role="progressbar" aria-valuenow="{{item.etatAavancement}}" aria-valuemin="0"
+											aria-valuemax="100" style="width: {{item.etatAavancement}}%">
+											<span class="sr-only"  ng-show=" 20 < item.etatAavancement <= 60">{{item.etatAavancement}} %</span>
+										</div>
+										<div class="progress-bar progress-bar-success" ng-show="item.etatAavancement>60"
+											role="progressbar" aria-valuenow="{{item.etatAavancement}}" aria-valuemin="0"
+											aria-valuemax="100" style="width: {{item.etatAavancement}}%">
+											<span class="sr-only"  ng-show="item.etatAavancement > 60">{{item.etatAavancement}} %</span>
+										</div>
+									</div>
+				
+				</td>
+				<td>{{item.operateur.nom}} {{item.operateur.prenom}}</td>
 				<td><button type="submit" class="btn btn-primary btn-block" ui-sref="detailProjet({id:item.idbd})">
 						<i class="fa fa-search  " aria-hidden="true"></i> Consulter
 					</button></td>

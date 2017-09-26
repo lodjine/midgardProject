@@ -13,12 +13,28 @@ private Long idBd;
 private String idTache;
 
 private String description;
+private Long hjIng;
+private Long hjTech;
 @ManyToOne
 private User operateur;
 
 private Long etatAavancement;
 @ManyToOne
 private Statut statut;
+
+@ManyToOne
+private Evenement event;
+
+@ManyToOne
+private Tache tacheLie;
+
+private Boolean avantTache;
+
+private Boolean apresTache;
+
+private Long delaiEntreTache;
+
+
 public Long getIdBd() {
 	return idBd;
 }
@@ -54,6 +70,48 @@ public Statut getStatut() {
 }
 public void setStatut(Statut statut) {
 	this.statut = statut;
+}
+public Evenement getEvent() {
+	return event;
+}
+public void setEvent(Evenement event) {
+	this.event = event;
+}
+public Long getHjIng() {
+	return hjIng;
+}
+public void setHjIng(Long hjIng) {
+	this.hjIng = hjIng;
+}
+public Long getHjTech() {
+	return hjTech;
+}
+public void setHjTech(Long hjTech) {
+	this.hjTech = hjTech;
+}
+public Tache getTacheLie() {
+	return tacheLie;
+}
+public void setTacheLie(Tache tacheLie) {
+	this.tacheLie = tacheLie;
+}
+public Boolean getAvantTache() {
+	return avantTache;
+}
+public void setAvantTache(Boolean avantTache) {
+	this.avantTache = avantTache;
+}
+public Boolean getApresTache() {
+	return apresTache;
+}
+public void setApresTache(Boolean apresTache) {
+	this.apresTache = apresTache;
+}
+public Long getDelaiEntreTache() {
+	return delaiEntreTache;
+}
+public void setDelaiEntreTache(Long delaiEntreTache) {
+	this.delaiEntreTache = delaiEntreTache;
 }
 
 

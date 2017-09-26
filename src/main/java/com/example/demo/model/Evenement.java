@@ -27,6 +27,8 @@ public class Evenement {
 	@Cascade({ CascadeType.DELETE, CascadeType.PERSIST })
 	private Phase idPhase;
 
+	
+	private String idEvent;
 	private String docAtransm;
 
 	private String etat;
@@ -139,6 +141,14 @@ public class Evenement {
 
 	public void setStatut(Statut statut) {
 		this.statut = statut;
+	}
+
+	public String getIdEvent() {
+		return idEvent;
+	}
+
+	public void setIdEvent(String idEvent) {
+		this.idEvent = idEvent;
 	}
 
 }

@@ -41,7 +41,14 @@ var projetCtrl = midgApp.controller('projetCtrl', function($scope, $window,
 		console.log($scope.phase);
 		phaseService.save($scope.phase);
 
-	}
+	};
+	
+	$scope.createIdPhase=function() {
+		$scope.phase.idPhase=$scope.phase.projet.idProjet+$scope.phase.phase;
+		
+	};
+	
+	
 	$scope.change = function() {
 		var dateFin = new Date($scope.phase.projet.dateFin);
 		var dateDebut = new Date($scope.phase.projet.dateDebut);

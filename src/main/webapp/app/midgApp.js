@@ -39,6 +39,16 @@ midgApp.config(function($stateProvider, $urlRouterProvider) {
     		templateUrl : 'listUser.html',
     		controller : 'userCtrl'
     			
+        }).state('listTache', {
+    		url : '/listTache',
+    		templateUrl : 'listTache.html',
+    		controller : 'tacheCtrl'
+    			
+        }).state('formTache', {
+            url: '/nouvelleTache',
+            templateUrl: 'formTache.html',
+			controller: 'tacheCtrl'
+
         });
     
 });

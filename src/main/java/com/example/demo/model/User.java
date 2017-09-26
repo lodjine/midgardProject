@@ -25,6 +25,8 @@ private String role;
 
 private Boolean interne;
 
+private Boolean ingenieur;
+
 public Long getId() {
 	return id;
 }
@@ -81,6 +83,14 @@ public Boolean getInterne() {
 
 public void setInterne(Boolean interne) {
 	this.interne = interne;
+}
+
+public Boolean getIngenieur() {
+	return ingenieur;
+}
+
+public void setIngenieur(Boolean ingenieur) {
+	this.ingenieur = ingenieur;
 }
 
 public User() {
