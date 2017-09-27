@@ -11,7 +11,7 @@
     	
     	var resourceUrl =  '/user/:id';
     	return $resource(resourceUrl, {}, {
-
+    		
     	});
     	
     

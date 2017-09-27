@@ -45,5 +45,11 @@ public class TacheService {
 	public void deleteTache(@PathVariable Long id) {
 		tacheDao.delete(id);
 	}
+	
+	@RequestMapping(value = "/tachesByEvent/{id}", method = RequestMethod.GET)
+	public List<Tache> getTachesByEvent(@PathVariable Long id) {
+		return tacheDao.getTacheByEvent(id);
+	}
+
 
 }

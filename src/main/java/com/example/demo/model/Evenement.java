@@ -52,7 +52,7 @@ public class Evenement {
 	private Boolean modele3d;
 	private Boolean rapport;
 	
-	
+	private Long nbTaches;
 
 	@ManyToOne
 	private Statut statut;
@@ -269,6 +269,18 @@ public class Evenement {
 
 	public void setIdEvent(String idEvent) {
 		this.idEvent = idEvent;
+	}
+
+
+
+	public Long getNbTaches() {
+		return nbTaches;
+	}
+
+
+
+	public void setNbTaches(Long nbTaches) {
+		this.nbTaches = nbTaches;
 	}
 
 }

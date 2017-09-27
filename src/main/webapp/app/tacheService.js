@@ -11,7 +11,11 @@
     	
     	var resourceUrl =  '/tache/:id';
     	return $resource(resourceUrl, {}, {
-
+    		'getByIdEvent': {
+                method: 'GET',
+                isArray: true,
+                url: '/tachesByEvent/:id'
+              }
     	});
     	
     

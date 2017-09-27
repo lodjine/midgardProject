@@ -58,7 +58,6 @@
 							</div>
 						</div>
 						<div class="col-lg-6">
-						
 							<div class="form-group">
 							
 								<label>Liaison tache</label> <select  ng-model="tache.tacheLie.idBd"   class="form-control">
@@ -72,12 +71,12 @@
 							 <div class="radio">
 							 
                                                 <label>
-                                                    <input type="radio" ng-model="tache.avantTache" name="optionsRadios" id="optionsRadios3" value="option3">Avant
+                                                    <input type="radio" ng-model="tache.avantTache" name="optionsRadios" id="optionsRadios3" value="true">Avant
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio"   ng-model="tache.apresTache"  name="optionsRadios" id="optionsRadios3" value="option3">Apres
+                                                    <input type="radio"   ng-model="tache.apresTache"  name="optionsRadios" id="optionsRadios3" value="true">Apres
                                                 </label>
                                             </div>
                                             </div>
@@ -96,7 +95,7 @@
 
 				
 				<button type="button" class="btn btn-success"
-					ng-click="saveProjet(documents)">Success</button>
+					ng-click="saveTache()">Success</button>
 
 				<!-- /.panel -->
 			</div>
